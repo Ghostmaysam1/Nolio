@@ -1,6 +1,10 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+router.push('/login');
 </script>
 
 <template>
-    <h1 class="text-3xl m-5">Nolio</h1>
 </template>
