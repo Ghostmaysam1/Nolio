@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اضافه کردن مربع‌های قابل درگ</title>
+    <style>
+        body {
+            height: 100vh; /* برای اطمینان از اینکه صفحه کامل پر شود */
+            margin: 0;
+            overflow: hidden; /* جلوگیری از اسکرول */
+            position: relative; /* برای موقعیت‌یابی مربع‌ها */
+        }
+        .draggable {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute; /* برای جابجایی آزاد */
+            cursor: grab; /* نشانگر ماوس */
+        }
+    </style>
+</head>
+<body>
+    <button id="addSquare">اضافه کردن مربع</button>
+
+    <script>
+        function createDraggableSquare(x, y) {
+            const square = document.createElement('div');
+            square.className = 'draggable';
+            square.style.left = `${x}px`;
+            square.style.top = `${y}px`;
+
+            let offsetX, offsetY;
+
+            square.addEventListener('mousedown', (e) => {
+                offsetX = e.clientX - square.getBoundingClientRect().left;
+                offsetY = e.clientY - square.getBoundingClientRect().top;
+                document.addEventListener('mousemove', mouseMoveHandler);
+                document.addEventListener('mouseup', mouseUpHandler);
+                square.style.cursor = 'grabbing'; // تغییر نشانگر ماوس
+            });
+
+            function mouseMoveHandler(e) {
+                square.style.left = `${e.clientX - offsetX}px`;
+                square.style.top = `${e.clientY - offsetY}px`;
+            }
+
+            function mouseUpHandler() {
+                document.removeEventListener('mousemove', mouseMoveHandler);
+                document.removeEventListener('mouseup', mouseUpHandler);
+                square.style.cursor = 'grab'; // بازگشت نشانگر ماوس
+            }
+
+            document.body.appendChild(square);
+        }
+
+        document.getElementById('addSquare').addEventListener('click', () => {
+            // موقعیت تصادفی برای مربع جدید
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 100);
+            createDraggableSquare(x, y);
+        });
+    </script>
+</body>
+</html>
