@@ -3,5 +3,5 @@ const {size} = defineProps<{size: number}>();
 </script>
 
 <template>
-    <div :class="`w-full h-[${size}px] bg-transparent`"></div>
+    <div class="w-full bg-transparent" :style="{height: size + 'px'}"></div>
 </template>
