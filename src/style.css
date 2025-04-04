@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: radio-light;
+    src: url("@assets/font/radio_canada/RadioCanada-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: radio;
+    src: url("@assets/font/radio_canada/RadioCanada-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: radio-bold;
+    src: url("@assets/font/radio_canada/RadioCanada-Bold.ttf") format("truetype");
+    font-weight: 600;
+}
 
 @theme {
     --color-main: #F5F5DC;
@@ -9,4 +26,7 @@
     --color-secondary: #000000;
     --color-text-dark: #000000;
     --color-text: #FFFFFF;
+    --font-radio: "radio", sans-serif;
+    --font-radio-light: "radio-light", sans-serif;
+    --font-radio-bold: "radio-bold", sans-serif;
 }

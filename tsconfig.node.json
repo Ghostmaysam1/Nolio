@@ -1,14 +1,5 @@
 {
   "compilerOptions": {
-    "paths": {
-      "@store/*": ["/src/store/*"],
-      "@components/*": ["/src/components/*"],
-      "@utils/*": ["/src/utils/*"],
-      "@assets/*": ["/src/assets/*"],
-      "@pages/*": ["/src/pages/*"],
-      "@router/*": ["/src/router/*"],
-      "@layouts/*": ["/src/layouts/*"],
-    },
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
     "target": "ES2022",
     "lib": ["ES2023"],

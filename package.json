@@ -1,7 +1,7 @@
 {
   "name": "nolio",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
     "@tailwindcss/vite": "^4.0.16",
     "@vueuse/core": "^13.0.0",
     "pinia": "^3.0.1",
