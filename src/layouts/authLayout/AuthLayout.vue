@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import AuthNavbar from '@/components/authNavbar/AuthNavbar.vue';
-import AuthLogo from '@/components/authLogo/AuthLogo.vue';
-import Google from '@/components/google/Google.vue';
+import AuthNavbar from '@/components/AUTH/authNavbar/AuthNavbar.vue';
+import AuthLogo from '@/components/AUTH/authLogo/AuthLogo.vue';
+import Google from '@/components/AUTH/google/Google.vue';
 import Gap from '@/components/gap/Gap.vue';
 
 import { RouterLink } from 'vue-router';
